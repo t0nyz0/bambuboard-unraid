@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>BambuBoard</Name>
+  <Repository>ghcr.io/t0nyz0/bambuboard:latest</Repository>
+  <Registry>https://github.com/t0nyz0/BambuBoard/pkgs/container/bambuboard</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/t0nyz0/BambuBoard/issues</Support>
+  <Project>https://github.com/t0nyz0/BambuBoard</Project>
+  <Overview>Monitor a Bambu Lab 3D printer on your local network. See print progress, temperatures, camera footage and experimental G-code visualization. Use the Scene Editor to build a live overlay for OBS.</Overview>
+  <Category>Tools:Utilities</Category>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/t0nyz0/BambuBoard/v3.3.2/public/assets/bambuboard-prism.svg</Icon>
+  <Requires>The printer must be reachable from Unraid on your local network. Back up the Docker volume bambuboard-data separately from the Unraid appdata share and keep it when updating. To reuse an existing bind mount, remove the named mount from Extra Parameters and map the same data folder to /usr/src/app/data. See the project README for the data ownership and upgrade steps.</Requires>
+  <ExtraParams>--mount type=volume,source=bambuboard-data,target=/usr/src/app/data</ExtraParams>
+  <TemplateURL>https://raw.githubusercontent.com/t0nyz0/bambuboard-unraid/main/templates/bambuboard.xml</TemplateURL>
+  <Config Name="Web UI port" Target="8080" Default="18080" Mode="tcp" Description="Port on the Unraid server used to open BambuBoard. Change this if port 18080 is already in use." Type="Port" Display="always" Required="true" Mask="false">18080</Config>
+</Container>

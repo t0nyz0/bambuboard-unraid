@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CommunityApplications>
+  <Profile>BambuBoard shows a Bambu Lab printer's progress, camera and widgets in one live dashboard. This repository hosts its Unraid container template. Open an issue on the BambuBoard project for support.</Profile>
+  <Icon>https://raw.githubusercontent.com/t0nyz0/BambuBoard/v3.3.2/public/assets/bambuboard-prism.svg</Icon>
+  <WebPage>https://github.com/t0nyz0/BambuBoard</WebPage>
+</CommunityApplications>
